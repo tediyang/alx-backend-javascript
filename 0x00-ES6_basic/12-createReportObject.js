@@ -5,10 +5,11 @@ export default function createReportObject(employeesList) {
     },
     getNumberOfDepartments(employeesList) {
       let count = 0;
-      for (let i in employeesList)
-        count++;
+      for (let _ in employeesList) {
+        count += 1;
+      }
       return count;
-    }
+    },
   };
   return data;
 }
