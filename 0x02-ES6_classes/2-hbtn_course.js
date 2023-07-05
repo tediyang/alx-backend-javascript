@@ -30,7 +30,7 @@ export default class HolbertonCourse {
       throw new TypeError('Students must be an array of strings');
     }
       this._students = value;
-    }
+  }
 
   /**
    * get the duration of the course.
@@ -38,6 +38,7 @@ export default class HolbertonCourse {
   get length() {
     return this._length;
   }
+
   /**
    * the duration should be passes as number.
    */
@@ -47,12 +48,14 @@ export default class HolbertonCourse {
     }
     this._length = value;
   }
+
   /**
    * get the nane of the course.
   */
   get name() {
       return this._name;
-    }
+  }
+
   /**
    * check the name of the course is passed a string.
    */
