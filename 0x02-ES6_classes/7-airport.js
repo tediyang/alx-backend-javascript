@@ -23,7 +23,7 @@ export default class Airport {
     if (typeof value !== 'string') {
       throw new Error('Name must be a string');
     }
-    this._code = code;
+    this._code = value;
   }
 
   get [Symbol.toStringTag]() {
