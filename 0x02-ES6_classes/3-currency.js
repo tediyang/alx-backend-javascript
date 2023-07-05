@@ -1,7 +1,7 @@
 export default class Currency {
   /**
    * Class Currency
-   * 
+   *
    * @param {String} code - currency code
    * @param {String} name - name of currency
    */
@@ -46,7 +46,7 @@ export default class Currency {
     this._code = value;
   }
 
-  displayFullCurrency () {
+  displayFullCurrency() {
     return `${this.name} (${this.code})`;
   }
 }
