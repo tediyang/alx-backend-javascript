@@ -22,16 +22,16 @@ export default class HolbertonCourse {
   /**
    * Make sure each student name are array of strings
   */
- set students(value) {
-   if (!(value instanceof Array)) {
-     throw new TypeError('Students must be an array of strings');
-   }
-   if (!value.every((student) => typeof student === 'string')) {
-     throw new TypeError('Students must be an array of strings');
-   }
-    this._students = value;
-  }
-  
+  set students(value) {
+    if (!(value instanceof Array)) {
+      throw new TypeError('Students must be an array of strings');
+    }
+    if (!value.every((student) => typeof student === 'string')) {
+      throw new TypeError('Students must be an array of strings');
+    }
+      this._students = value;
+    }
+
   /**
    * get the duration of the course.
    */
@@ -50,9 +50,9 @@ export default class HolbertonCourse {
   /**
    * get the nane of the course.
   */
- get name() {
-    return this._name;
-  }
+  get name() {
+      return this._name;
+    }
   /**
    * check the name of the course is passed a string.
    */
