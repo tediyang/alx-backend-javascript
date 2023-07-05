@@ -29,7 +29,7 @@ export default class HolbertonCourse {
     if (!value.every((student) => typeof student === 'string')) {
       throw new TypeError('Students must be an array of strings');
     }
-      this._students = value;
+    this._students = value;
   }
 
   /**
@@ -53,7 +53,7 @@ export default class HolbertonCourse {
    * get the nane of the course.
   */
   get name() {
-      return this._name;
+    return this._name;
   }
 
   /**
