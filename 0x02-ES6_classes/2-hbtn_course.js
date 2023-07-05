@@ -23,10 +23,12 @@ export default class HolbertonCourse {
    * Make sure each student name are array of strings
   */
  set students(value) {
-   if (!(value instanceof Array))
-   throw new TypeError('Students must be an array of strings');
-   if (!value.every((student) => typeof student === 'string'))
-      throw new TypeError('Students must be an array of strings');
+   if (!(value instanceof Array)) {
+     throw new TypeError('Students must be an array of strings');
+   }
+   if (!value.every((student) => typeof student === 'string')) {
+     throw new TypeError('Students must be an array of strings');
+   }
     this._students = value;
   }
   
@@ -40,8 +42,9 @@ export default class HolbertonCourse {
    * the duration should be passes as number.
    */
   set length(value) {
-    if (typeof value !== 'number')
+    if (typeof value !== 'number') {
       throw new TypeError('Length must be a number');
+    }
     this._length = value;
   }
   /**
@@ -54,8 +57,9 @@ export default class HolbertonCourse {
    * check the name of the course is passed a string.
    */
   set name(value) {
-    if (typeof value !== 'string')
+    if (typeof value !== 'string') {
       throw new TypeError('Name must be a string');
+    }
     this._name = value;
   }
 }
