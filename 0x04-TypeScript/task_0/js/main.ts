@@ -15,7 +15,7 @@ const student1: Student = {
 };
 
 // Second student
-let student2: Student = {
+const student2: Student = {
   firstName: 'Reaper',
   lastName: 'Codes',
   age: 2,
