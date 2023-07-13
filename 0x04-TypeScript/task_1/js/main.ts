@@ -46,4 +46,3 @@ export class StudentClass {
     return this.firstName;
   }
 }
-
