@@ -1,12 +1,3 @@
-blem resolved
-a415f71
- · 
-last week
-History
-File metadata and controls
-
-Code
-
 export interface MajorCredits {
   credits: number & { __brand: 'MajorCredits.credits' };
 }
