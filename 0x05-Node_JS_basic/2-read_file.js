@@ -19,7 +19,7 @@ function countStudents(path) {
         sweFir.push(studInfo[0]);
       }
     }
-  } catch {
+  } catch (error) {
     throw new Error('Cannot load the database');
   }
 
