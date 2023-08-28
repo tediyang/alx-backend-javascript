@@ -1,5 +1,5 @@
-const countStudents = require('./3-read_file_async');
 const http = require('http');
+const countStudents = require('./3-read_file_async');
 
 const port = 1245;
 
@@ -11,12 +11,12 @@ const app = http.createServer(async (req, res) => {
   } else if (req.url === '/students') {
     res.write('This is the list of our students');
     await countStudents('database.csv')
-    .then((msg) => {
-      res.write(msg);
-    })
-    .catch((err) => {
-      res.write(err.message);
-    })
+      .then((msg) => {
+        res.write(msg);
+      })
+      .catch((err) => {
+        res.write(err.message);
+      });
   }
   res.end();
 });
