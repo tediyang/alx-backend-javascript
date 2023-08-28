@@ -5,19 +5,21 @@ const port = 1245;
 
 const app = http.createServer(async (req, res) => {
   res.statusCode = 200;
-
   if (req.url === '/') {
-    res.write('Hello Holberton School!');
+    res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
-    res.write('This is the list of our students');
-    await countStudents('database.csv')
+    let dbInfo = 'This is the list of our students\n';
+    await countStudents(process.argv[2])
       .then((msg) => {
-        res.end(msg);
+        dbInfo += msg;
+        res.write(dbInfo);
       })
       .catch((err) => {
-        res.end(err.message);
+        dbInfo += err.message;
+        res.write(dbInfo);
       });
   }
+  res.end();
 });
 
 app.listen(port, () => {
