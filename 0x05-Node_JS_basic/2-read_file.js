@@ -19,15 +19,15 @@ function countStudents(path) {
         sweFir.push(studInfo[0]);
       }
     }
+      console.log(`Number of students: ${csStud + sweStud}`);
+      console.log(`Number of students in CS: ${csStud}. List: ${csFir
+        .join(', ')}`);
+      console.log(`Number of students in SWE: ${sweStud}. List: ${sweFir
+        .join(', ')}`);
+
   } catch (error) {
     throw new Error('Cannot load the database');
   }
-
-  console.log(`Number of students: ${csStud + sweStud}`);
-  console.log(`Number of students in CS: ${csStud}. List: ${csFir
-    .join(', ')}`);
-  console.log(`Number of students in SWE: ${sweStud}. List: ${sweFir
-    .join(', ')}`);
 }
 
 module.exports = countStudents;
