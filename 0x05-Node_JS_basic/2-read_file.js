@@ -8,7 +8,7 @@ function countStudents(path) {
     let sweStud = 0;
     const csFir = [];
     const sweFir = [];
-  
+
     for (let i = 1; i < readData.length; i += 1) {
       const studInfo = readData[[i]].split(',');
       if (studInfo[3].replace(/\r/g, '') === 'CS') {
@@ -19,11 +19,11 @@ function countStudents(path) {
         sweFir.push(studInfo[0]);
       }
     }
-      console.log(`Number of students: ${csStud + sweStud}`);
-      console.log(`Number of students in CS: ${csStud}. List: ${csFir
-        .join(', ')}`);
-      console.log(`Number of students in SWE: ${sweStud}. List: ${sweFir
-        .join(', ')}`);
+    console.log(`Number of students: ${csStud + sweStud}`);
+    console.log(`Number of students in CS: ${csStud}. List: ${csFir
+      .join(', ')}`);
+    console.log(`Number of students in SWE: ${sweStud}. List: ${sweFir
+      .join(', ')}`);
 
   } catch (error) {
     throw new Error('Cannot load the database');
