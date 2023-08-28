@@ -1,14 +1,11 @@
-const readUser = require('readline');
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-const data = readUser.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+process.stdin.on('readable', () => {
+  const uname = process.stdin.read();
 
-data.question('Welcome to Holberton School, what is your name?\n',
-(userName) => {
-  console.log(`Your name is: ${userName}`);
-  data.close();
+  if (uname) {
+    process.stdout.write(`Your name is: ${uname}`);
+  }
 });
 
 process.stdin.on('close', () => {
