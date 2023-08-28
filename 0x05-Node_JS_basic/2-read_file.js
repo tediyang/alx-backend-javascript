@@ -24,7 +24,6 @@ function countStudents(path) {
       .join(', ')}`);
     console.log(`Number of students in SWE: ${sweStud}. List: ${sweFir
       .join(', ')}`);
-
   } catch (error) {
     throw new Error('Cannot load the database');
   }
