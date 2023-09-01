@@ -18,7 +18,7 @@ describe('calculate Number', function () {
         it('should round and subtract', function () {
             const a = 3;
             const b = 1.6;
-            const expectedVal = -1;
+            const expectedVal = 1;
 
             const theSubtracted = calculateNumber('SUBTRACT', a, b);
 
