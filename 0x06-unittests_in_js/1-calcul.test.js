@@ -14,6 +14,9 @@ describe('calculate Number', function () {
             assert.strictEqual(expectedVal, theSum);
         });
     });
+});
+
+describe('calculate Number', function () {
     describe('SUBTRACT', function () {
         it('should round and subtract', function () {
             const a = 3;
@@ -25,6 +28,9 @@ describe('calculate Number', function () {
             assert.strictEqual(expectedVal, theSubtracted);
         });
     });
+});
+
+describe('calculate Number', function () {    
     describe('DIVIDE', function () {
         describe('if denominator rounds to 0', function () {
             it('should return Error', function (){
@@ -36,8 +42,6 @@ describe('calculate Number', function () {
 
                 assert.strictEqual(expectedVal, theDivided);
             });
-        });
-        describe('if the rounded denominator != 0', function () {
             it('should return the divided value', function () {
                 const a = 5;
                 const b = 0.7;
