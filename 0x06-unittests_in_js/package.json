@@ -11,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/Tediyang/alx-backend-javascript/issues"
   },
-  "homepage": "https://github.com/Tediyang/alx-backend-javascript#readme"
+  "homepage": "https://github.com/Tediyang/alx-backend-javascript#readme",
+  "dependencies": {
+    "sinon": "^15.2.0"
+  }
 }
