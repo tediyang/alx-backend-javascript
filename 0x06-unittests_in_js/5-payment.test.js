@@ -4,6 +4,7 @@ const sinon = require("sinon");
 const Utils = require('./utils.js');
 const sendPaymentRequestToApi = require('./3-payment.js');
 const { expect } = require('chai');
+const { beforeEach } = require("mocha");
 
 describe('sendPaymentRequestToAPI', function () {
     // Declare the stub and spy variables
@@ -12,13 +13,13 @@ describe('sendPaymentRequestToAPI', function () {
     let calculNumStub10;
     let consoleLogSpy10;
     describe('sendPaymentRequestToAPI with 100 and 20', function () {
-        before(function () {
+        beforeEach(function () {
             // stub Utils.calculateNumber to always return 120
             calculNumStub100 = sinon.stub(Utils, 'calculateNumber').returns(120);
             // spy the console.log
             consoleLogSpy100 = sinon.spy(console, 'log');
         });
-        after(function () {
+        afterEach(function () {
             // After each test, restore the original console.log
             consoleLogSpy100.restore();
             calculNumStub100.restore();
@@ -37,13 +38,13 @@ describe('sendPaymentRequestToAPI', function () {
         });
     });
     describe('sendPaymentRequestToAPI with 10 and 10', function () {
-        before(function () {
+        beforeEach(function () {
             // stub Utils.calculateNumber to always return 20
             calculNumStub10 = sinon.stub(Utils, 'calculateNumber').returns(20);
             // spy the console.log
             consoleLogSpy10 = sinon.spy(console, 'log');
         });
-        after(function () {
+        afterEach(function () {
             // After each test, restore the original console.log
             consoleLogSpy10.restore();
             calculNumStub10.restore();
